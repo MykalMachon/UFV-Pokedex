@@ -1,0 +1,32 @@
+{
+  "name": "comp390website",
+  "version": "1.0.0",
+  "description": "a node-server to host a simple website for COMP 390's term project",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MykalMachon/comp-390-website.git"
+  },
+  "keywords": [],
+  "author": "Mykal Machon <@MykalMachon>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MykalMachon/comp-390-website/issues"
+  },
+  "homepage": "https://github.com/MykalMachon/comp-390-website#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.0.2",
+    "postcss-preset-env": "^6.7.0",
+    "tailwindcss": "^2.0.1"
+  },
+  "dependencies": {
+    "next": "^10.0.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
