@@ -1,3 +1,5 @@
+import { ErrorBoundary } from 'react-error-boundary';
+
 import PokeSearch from '@components/PokeSearch';
 import PokeFinder from '@components/PokeFinder';
 import { useReducer } from 'react';
@@ -15,16 +17,6 @@ const Pokedex = () => {
           ...currState,
           searchQuery: action.payload,
         };
-      case 'SEARCH_SUCCESS':
-        return {
-          ...currState,
-          currPokemon: action.payload,
-        };
-      case 'SEARCH_ERROR':
-        return {
-          ...currState,
-          currPokemon: false,
-        };
       default:
         throw new Error(
           'Improper action.type was dispatched to PokeReducer in Pokedex.js'
@@ -39,10 +31,27 @@ const Pokedex = () => {
 
   return (
     <section id="pokedex">
-      <PokeSearch dispatch={dispatch} />
-      <PokeFinder pokeName={state.searchQuery} dispatch={dispatch} />
+      <ErrorBoundary
+        FallbackComponent={ErrorFallback}
+        onError={() => {
+          console.log('error is caught');
+        }}
+      >
+        <PokeSearch dispatch={dispatch} />
+        <PokeFinder pokeName={state.searchQuery} dispatch={dispatch} />
+      </ErrorBoundary>
     </section>
   );
 };
+
+function ErrorFallback({ error, resetErrorBoundary }) {
+  return (
+    <div role="alert">
+      <p>Something went wrong:</p>
+      <pre>{error.message}</pre>
+      <button onClick={resetErrorBoundary}>Try again</button>
+    </div>
+  );
+}
 
 export default Pokedex;
