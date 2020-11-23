@@ -1,9 +1,9 @@
 const About = () => {
   return (
-    <>
+    <div className="mx-4 md:mx-0">
       <h1 className="mb-2 text-xl text-gray-900">About The App</h1>
       <p className="mb-2 text-gray-500">
-        This app was made for project portion of COMP 390. While the main focus
+        This app was made for project portion of CIS 341. While the main focus
         of the project was to create and manage a web server we also wanted to
         create a memorable and fun application to host on that web server.
       </p>
@@ -14,7 +14,7 @@ const About = () => {
       </p>
       <p className="mb-2 text-gray-700">- Hieu Le</p>
       <p className="mb-2 text-gray-700">- Mykal Machon</p>
-    </>
+    </div>
   );
 };
 

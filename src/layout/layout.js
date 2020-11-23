@@ -3,15 +3,15 @@ import Link from 'next/link';
 const Layout = ({ children }) => {
   return (
     <main>
-      <div className="flex w-full items-center flex-col">
+      <div className="flex flex-col items-center w-full">
         <img
           src="/pokemon_logo.png"
           alt="Pokemon Logo"
           width="256px"
           height="104px"
         />
-        <nav className="navigation_bar mt-4">
-          <ul className="flex flex-rows gap-4">
+        <nav className="mt-4 navigation_bar">
+          <ul className="flex gap-4 flex-rows">
             <li>
               <Link href="/">
                 <a>Home</a>
@@ -25,11 +25,11 @@ const Layout = ({ children }) => {
           </ul>
         </nav>
       </div>
-      <div className="w-full grid place-items-center mt-8">
-        <div className="max-w-2xl w-full">{children}</div>
+      <div className="grid w-full mt-8 place-items-center">
+        <div className="w-full max-w-2xl">{children}</div>
       </div>
-      <footer className="w-full grid place-items-center mt-8">
-        UFV Pokedex App - COMP 390 2020
+      <footer className="grid w-full mt-8 place-items-center">
+        UFV Pokedex App - CIS 341 2020
       </footer>
     </main>
   );
