@@ -1,7 +1,7 @@
 {
-  "name": "comp390website",
+  "name": "cis341-website",
   "version": "1.0.0",
-  "description": "a node-server to host a simple website for COMP 390's term project",
+  "description": "a node-server to host a simple website for CIS 341's term project",
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
