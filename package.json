@@ -1,6 +1,6 @@
 {
   "name": "cis341-website",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "a node-server to host a simple website for CIS 341's term project",
   "main": "index.js",
   "scripts": {
